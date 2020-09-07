@@ -59,8 +59,6 @@ app.post("/repositories/:id/like", (request, response) => {
   if (repoIndex < 0) return response.status(400).send("")
  
   repositories[repoIndex].likes += 1
-  
-  console.log(repositories[repoIndex]);
 
   return response.json(repositories[repoIndex])
 
